@@ -1,4 +1,4 @@
-# puzzle15
+# Life
 A Conway's [Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) emulator.
 
 
@@ -9,6 +9,6 @@ The "game" is a zero-player game, meaning that its evolution is determined by it
 
 ![new pattern image](http://i61.tinypic.com/2nlsu4m.png)
 
-Once the configuration has been created, or loaded from a pre-existing file, it can be run to observe its evolution.
+Once the configuration has been created, or loaded from a pre-existing file, it can be run in order to observe its evolution.
 
 ![run image](http://i58.tinypic.com/21alcw4.png)
