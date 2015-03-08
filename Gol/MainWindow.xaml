@@ -1,0 +1,58 @@
+﻿<Window x:Class="Life_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Life" Height="650" Width="900" Icon="glider.ico"
+        SizeChanged="Window_SizeChanged">
+    
+    <DockPanel Name="MainPanel">
+        
+        <Menu Height="22" DockPanel.Dock="Top" Name="Menu">
+            <MenuItem Header="File" Name="MItemFile" SubmenuOpened="MItem_SubmenuOpened" SubmenuClosed="MItem_SubmenuClosed">
+                <MenuItem Header="New pattern" Name="MItemNew" Click="MItemNew_Click" />
+                <Separator />
+                <MenuItem Header="Run..." Name="MItemRun" Click="MItemRun_Click" />
+                <MenuItem Header="Load..." Name="MItemLoad" Click="MItemLoad_Click"/>
+                <MenuItem Header="Save..." Name="MItemSave" Click="MItemSave_Click" IsEnabled="False"/>
+                <Separator />
+                <MenuItem Header="Exit" Name="MItemExit" Click="MItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Settings" Name="MItemSettings" SubmenuOpened="MItem_SubmenuOpened" SubmenuClosed="MItem_SubmenuClosed">
+                <MenuItem Header="Cell color" Name="MItemCellColor" Height="22" Click="MItemCellColor_Click" />
+                <MenuItem Header="Speed" Name="MItemSpeed" Height="22" IsEnabled="False">
+                    <MenuItem Header="Slow" Name="MItemSlow" Click="MItemSlow_Click"/>
+                    <MenuItem Header="Normal" Name="MItemNormal" Click="MItemNormal_Click" IsChecked="True"/>
+                    <MenuItem Header="Fast" Name="MItemFast" Click="MItemFast_Click"/>
+                    <MenuItem Header="Best" Name="MItemVeryFast" Click="MItemVeryFast_Click"/>
+                </MenuItem>
+                <MenuItem Header="Zoom +" Name="MItemZoomPlus" Height="22" Click="ZoomPlus_Click" IsEnabled="False"/>
+                <MenuItem Header="Zoom -" Name="MItemZoomMinus" Height="22" Click="ZoomMinus_Click" IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem Header="Run" Name="MItemPauseResume" Click="MItemPauseResume_Click" IsEnabled="False"/>
+            <MenuItem Header="About Life" Name="MItemAbout" Click="MItemAbout_Click"/>
+        </Menu>
+        
+        <StatusBar Name="SBar" Height="18" DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="TBlockGeneraton" FontFamily="Consolas"/>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="©" Margin="10, 0, 5, 0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform CenterX="0.5" CenterY="0.5" Angle="180"/>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Consolas">Marco Conte 2014</TextBlock>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+
+        <ScrollViewer Name="SViewer" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" ScrollChanged="SViewer_ScrollChanged">
+            <Canvas Name="Viewport" Background="White" ClipToBounds="True" Loaded="Viewport_Loaded" MouseDown="Viewport_MouseDown"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Panel.ZIndex="-1"/>
+        </ScrollViewer>
+        
+    </DockPanel>
+    
+</Window>
