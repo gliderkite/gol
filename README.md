@@ -1,5 +1,5 @@
 # Life
-A Conway's [Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) emulator.
+A Conway's [Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) emulator written in C# (GUI developed by means of WPF).
 
 
 ## How to Play
