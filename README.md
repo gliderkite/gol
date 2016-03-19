@@ -14,6 +14,6 @@ Once the configuration has been created, or loaded from a pre-existing file, it 
 ![run image](http://i58.tinypic.com/21alcw4.png)
 
 
-###Download The Game
+###Download the Game
 
 [GOL itch.io](https://gliderkite.itch.io/gol)
